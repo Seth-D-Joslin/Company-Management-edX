@@ -12,4 +12,4 @@ const pool = new Pool({
     port: 3000,
 });
 
-export { pool };
+export default pool;

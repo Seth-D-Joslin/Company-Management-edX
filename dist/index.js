@@ -3,8 +3,6 @@ import { viewAllEmployees, addEmployee, updateEmployee, deleteEmployee } from '.
 import { viewAllRoles, addRole, updateRole, deleteRole } from './jobRoles.js';
 import { viewAllDepartments, addDepartment, updateDepartment, deleteDepartment } from "./departments.js";
 
-
-
 function init() {
     inquirer
         .prompt([
@@ -16,7 +14,7 @@ function init() {
           }      
         ])
         .then((data) => {
-          switch(data) {
+          switch(data.Choices) {
             case 'View All Employees':
               viewAllEmployees();
               break;

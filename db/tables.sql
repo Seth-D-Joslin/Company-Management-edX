@@ -1,6 +1,6 @@
 CREATE TABLE departments (
     id SERIAL PRIMARY KEY,
-    departmentName VARCHAR(30) UNIQUE NOT NULL,
+    departmentName VARCHAR(30) UNIQUE NOT NULL
 );
 
 CREATE TABLE jobRoles (

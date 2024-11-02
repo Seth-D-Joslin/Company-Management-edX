@@ -1,5 +1,6 @@
 import { init } from "./index.js";
 import inquirer from "inquirer";
+import pool from './connection.js';
 
 function viewAllDepartments() {
   pool.query(`SELECT * FROM departments`, (err, res) => {

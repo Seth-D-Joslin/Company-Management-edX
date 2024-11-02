@@ -1,12 +1,13 @@
 import { init } from './index.js';
 import inquirer from 'inquirer';
+import pool from './connection.js';
 
 function viewAllEmployees() {
     pool.query(`SELECT * FROM employees`, (err, res) => {
         if (err) throw err;
         console.table(res.rows);
         init();
-    })
+    });
 }
 
 function addEmployee() {

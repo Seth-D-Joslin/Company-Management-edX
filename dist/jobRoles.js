@@ -1,5 +1,6 @@
 import { init } from './index.js';
 import inquirer from 'inquirer';
+import pool from './connection.js';
 
 function viewAllRoles() {
     pool.query(`SELECT * FROM jobRoles`, (err, res) => {
@@ -9,7 +10,7 @@ function viewAllRoles() {
     })
     }
     
-    function addRole() {
+function addRole() {
         pool.query("SELECT * FROM departments", (err, res) => {
             if (err)
                 throw err;
@@ -47,7 +48,7 @@ function viewAllRoles() {
         });
     }
     
-    function updateRole() {
+function updateRole() {
         pool.query("SELECT * FROM jobRoles", (err, res) => {
             if (err)
                 throw err;
@@ -89,7 +90,7 @@ function viewAllRoles() {
         });
     }
     
-    function deleteRole() {
+function deleteRole() {
         pool.query("SELECT * FROM jobRoles", (err, res) => {
             if (err)
                 throw err;
