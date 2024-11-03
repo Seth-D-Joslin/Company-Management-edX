@@ -21,7 +21,9 @@ VALUES
 ('Big', 'John', 2, NULL),
 ('Powerful', 'Jon', 2, 2),
 ('GoJohnny', 'GoGo', 3, NULL),
+('Johnny', 'Boy', 3, 3),
 ('John', 'Wayne', 4, NULL),
 ('John', 'Wick', 4, 4),
 ('John', 'FKennedy', 5, NULL),
-('John', 'Doe', 5, 5);
+
+
