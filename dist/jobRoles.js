@@ -54,7 +54,7 @@ function updateRole() {
   pool.query("SELECT * FROM jobRoles", (err, res) => {
     if (err) throw err;
     const employees = res.rows.map((employee) => ({
-      name: `${employee.firstName} ${employee.lastName}`,
+      name: `${employee.employeeFirstName} ${employee.employeeLastName}`,
       value: employee.id,
     }));
     pool.query("SELECT * FROM jobRoles", (err, res) => {
@@ -80,7 +80,7 @@ function updateRole() {
         ])
         .then((data) => {
           pool.query(
-            "UPDATE employee SET role_id = $1 WHERE id = $2",
+            "UPDATE employees SET roleID = $1 WHERE id = $2",
             [data.roleID, data.employeeID],
             (err, __res) => {
               if (err) throw err;
